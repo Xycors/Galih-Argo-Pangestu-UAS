@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Jepang | Beranda</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/waktu.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Banner -->
+<header class="banner">
+    <h1>Selamat Datang di Jepang</h1>
+    <p>Negeri Matahari Terbit yang Penuh Keajaiban</p>
+        <p>Waktu Saat Ini : 
+        <span id="clock" class="top-clock"></span>
+        <span id="date" class="top-date"></span>
+    </p>
+</header>
+
+<!-- Menu -->
+<nav class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="galeri.html">Gallery</a>
+    <a href="kontak.html">Kontak</a>
+</nav>
+
+<!-- Content -->
+<main class="content home">
+
+    <section class="card highlight">
+        <h2>Jepang, Negeri Sakura</h2>
+        <p>
+            Jepang adalah negara kepulauan di kawasan Asia Timur yang dikenal luas
+            sebagai Negeri Sakura. Negara ini memiliki keunikan tersendiri karena
+            mampu memadukan budaya tradisional yang telah diwariskan selama ratusan
+            tahun dengan perkembangan teknologi modern yang sangat pesat.
+        </p>
+        <p>
+            Keindahan alam, kedisiplinan masyarakat, serta kemajuan infrastrukturnya
+            menjadikan Jepang sebagai salah satu negara yang paling menarik untuk
+            dipelajari dan dikunjungi.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Letak Geografis dan Kondisi Alam</h3>
+        <p>
+            Jepang terletak di Asia Timur dan terdiri dari ribuan pulau, dengan empat
+            pulau utama yaitu Honshu, Hokkaido, Kyushu, dan Shikoku. Letaknya yang berada
+            di jalur cincin api Pasifik menyebabkan Jepang sering mengalami gempa bumi
+            dan aktivitas vulkanik. Namun demikian, masyarakat Jepang memiliki kesiapan
+            dan sistem mitigasi bencana yang sangat baik.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Empat Musim yang Menjadi Daya Tarik</h3>
+        <p>
+            Salah satu keunikan Jepang adalah adanya empat musim yang jelas, yaitu musim
+            semi, panas, gugur, dan dingin. Musim semi identik dengan bunga sakura yang
+            bermekaran, sedangkan musim gugur dikenal dengan daun momiji yang berwarna
+            merah dan kuning. Perubahan musim ini memberikan pengalaman wisata yang
+            berbeda sepanjang tahun.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Kehidupan dan Etos Masyarakat</h3>
+        <p>
+            Masyarakat Jepang dikenal memiliki etos kerja yang tinggi, disiplin, serta
+            menjunjung nilai sopan santun. Nilai-nilai tersebut diterapkan dalam
+            kehidupan sehari-hari, mulai dari lingkungan sekolah, tempat kerja, hingga
+            penggunaan fasilitas umum. Hal ini menciptakan tatanan sosial yang tertib
+            dan harmonis.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Perkembangan Teknologi dan Transportasi</h3>
+        <p>
+            Jepang merupakan salah satu negara maju di bidang teknologi. Inovasi dalam
+            industri otomotif, elektronik, dan robotika telah menjadikan Jepang sebagai
+            pelopor teknologi global. Selain itu, sistem transportasi seperti kereta
+            cepat Shinkansen menunjukkan efisiensi dan ketepatan waktu yang tinggi.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Budaya Populer dan Pariwisata</h3>
+        <p>
+            Selain budaya tradisional, Jepang juga terkenal dengan budaya populer
+            seperti anime, manga, dan musik. Perpaduan antara budaya modern dan
+            tradisional ini membuat Jepang menjadi destinasi wisata favorit bagi
+            wisatawan dari berbagai negara, termasuk Indonesia.
+        </p>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 - Galih Argo Pangestu | NIM : 251011700229 | Kelas : 01SIFP004</p>
+</footer>
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

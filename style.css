@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #ede6d8; /* krem dominan */
+}
+
+.banner {
+    background-color: #c62828;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.menu {
+    background-color: #5d4037; /* coklat tua */
+    text-align: center;
+}
+
+.menu a {
+    color: #fffaf0;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #8d6e63;
+}
+
+.content {
+    background-color: #f9f4ea; /* krem terang */
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #4e342e;
+    color: #fffaf0;
+    text-align: center;
+    padding: 10px;
+}
+
+.galeri img {
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.form button {
+    padding: 10px;
+    background: #c62828;
+    color: white;
+    border: none;
+}
+
+.top-date {
+    font-size: 14px;
+    opacity: 0.85;
+    color: #ffffff;
+}
+
+.top-clock {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    background-color: #f9f4ea;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.highlight {
+    background-color: #fff1e0;
+    border-left: 6px solid #c62828;
+}
+
+

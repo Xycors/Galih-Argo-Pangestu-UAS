@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeri Jepang</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/waktu.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Banner -->
+<header class="banner">
+    <h1>Gallery Jepang</h1>
+    <p>Waktu Saat Ini : 
+        <span id="clock" class="top-clock"></span>
+        <span id="date" class="top-date"></span>
+    </p>
+</header>
+
+<!-- Menu -->
+<nav class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="galeri.html">Gallery</a>
+    <a href="kontak.html">Kontak</a>
+</nav>
+
+<main class="content">
+    <h2>Keindahan Jepang</h2>
+    <!-- Content -->
+    <section class="container" id="destinations">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/tokyo.jfif" class="card-img-top" alt="Tokyo">
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo</h5>
+                        <p class="card-text">Tokyo adalah ibu kota Jepang, pusat pemerintahan, budaya, dan ekonomi yang dinamis, serta salah satu kota metropolitan terpadat dan paling maju di dunia, terkenal dengan perpaduan tradisi kuno (seperti Kuil Senso-ji) dan modernitas futuristik (seperti Shibuya Crossing dan Tokyo Skytree).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/kyoto.jfif" class="card-img-top" alt="Kyoto">
+                    <div class="card-body">
+                        <h5 class="card-title">Kyoto</h5>
+                        <p class="card-text">Kyoto adalah kota bersejarah di Jepang yang dulunya merupakan ibu kota kekaisaran selama lebih dari 1.000 tahun, terkenal sebagai pusat budaya tradisional Jepang dan pemandangan alam yang memukau sepanjang tahun yang menawarkan suasana Jepang klasik. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/gunung fuji.jfif" class="card-img-top" alt="Mount Fuji">
+                    <div class="card-body">
+                        <h5 class="card-title">Gunung Fuji</h5>
+                        <p class="card-text">Gunung Fuji adalah gunung tertinggi di Jepang (3.776 m), gunung berapi ikonik dengan puncak bersalju simetris, terletak di perbatasan Yamanashi & Shizuoka, barat Tokyo, simbol budaya Jepang, bagian dari Taman Nasional Fuji-Hakone-Izu, dan situs Warisan Dunia UNESCO. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/sakura.jfif" class="card-img-top" alt="Mount Fuji">
+                    <div class="card-body">
+                        <h5 class="card-title">Musim Semi (Sakura)</h5>
+                        <p class="card-text">Musim Semi (Sakura) adalah periode indah di Jepang (Maret-Mei) saat bunga sakura mekar, melambangkan kehidupan baru, keindahan, dan kebahagiaan, dengan tradisi piknik populer bernama "hanami".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/kuil.jpg" class="card-img-top" alt="Mount Fuji">
+                    <div class="card-body">
+                        <h5 class="card-title">Kuil Jepang</h5>
+                        <p class="card-text">Kuil Jepang adalah bangunan suci yang biasanya digunakan untuk beribadah dan ritual keagamaan dalam tradisi Shinto maupun Buddhisme. Berikut penjelasan singkat tentang kuil Jepang:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/osaka.jfif" class="card-img-top" alt="Mount Fuji">
+                    <div class="card-body">
+                        <h5 class="card-title">Osaka</h5>
+                        <p class="card-text">Osaka adalah kota yang memesona dan menenangkan, yang paling terkenal karena makanan, keceriaan, dan kehidupan malamnya—dengan sedikit sentuhan sejarah serta budaya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+<!-- Footer -->
+<footer>
+    <p>© 2026 - Galih Argo Pangestu | NIM : 251011700229 | Kelas : 01SIFP004</p>
+</footer>
+
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
